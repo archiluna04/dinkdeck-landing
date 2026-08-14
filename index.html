@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dink Deck — Pickleball Court Queue</title>
+  <meta name="description" content="Open-play court queue for pickleball. Add your courts, sign players in, and Dink Deck rotates everyone through fairly — with skill-based matching when you want the games closer." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Dink Deck — Pickleball Court Queue" />
+  <meta property="og:description" content="Open-play court queue for pickleball. Add your courts, sign players in, and Dink Deck rotates everyone through fairly — with skill-based matching when you want the games closer." />
+  <meta property="og:image" content="https://dinkdeck.net/images/host-console.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="wordmark" href="#top" aria-label="Dink Deck">
+        <svg width="32" height="32" viewBox="0 0 64 64" aria-hidden="true">
+          <rect x="0" y="0" width="64" height="64" rx="16" fill="var(--primary)" />
+          <circle cx="32" cy="32" r="21" fill="var(--primary-foreground)" />
+          <g fill="var(--primary)">
+            <circle cx="32" cy="32" r="3" /><circle cx="42.5" cy="32" r="3" />
+            <circle cx="37.2" cy="41.1" r="3" /><circle cx="26.8" cy="41.1" r="3" />
+            <circle cx="21.5" cy="32" r="3" /><circle cx="26.8" cy="22.9" r="3" />
+            <circle cx="37.2" cy="22.9" r="3" />
+            <circle cx="46.1" cy="23.9" r="2.5" /><circle cx="32" cy="15.8" r="2.5" />
+            <circle cx="17.9" cy="23.9" r="2.5" /><circle cx="17.9" cy="40.1" r="2.5" />
+            <circle cx="32" cy="48.2" r="2.5" /><circle cx="46.1" cy="40.1" r="2.5" />
+          </g>
+        </svg>
+        <span class="wordmark__name">Dink Deck</span>
+      </a>
+      <div class="header-actions">
+        <a class="btn btn--ghost btn--sm" href="https://play.dinkdeck.net/signin">Sign in</a>
+        <a class="btn btn--primary btn--sm" href="https://play.dinkdeck.net/register">Get started</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <section class="hero">
+      <div class="wrap">
+        <div>
+          <p class="eyebrow">Open play, dealt right</p>
+          <h1>Never wonder who's&nbsp;up&nbsp;next.</h1>
+          <p class="lede">
+            Add your courts, sign players in, and Dink Deck rotates everyone
+            through fairly — with skill-based matching when you want the
+            games closer.
+          </p>
+          <div class="hero-ctas">
+            <a class="btn btn--primary" href="https://play.dinkdeck.net/register">Get started free</a>
+            <a class="btn btn--ghost" href="#hosting">See how hosting works</a>
+          </div>
+          <p class="trust-line">
+            Runs right in the browser — tonight's queue needs no install and
+            no account to run.
+          </p>
+        </div>
+        <div class="hero-visual">
+          <div class="phone-frame rise-in">
+            <img src="images/home.png" alt="Dink Deck home screen showing this week's schedule and a club post" width="300" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features wrap">
+
+      <article class="feature-row feature-row--wide feature-row--flip" id="hosting">
+        <div class="feature-row__copy">
+          <p class="eyebrow">For hosts</p>
+          <h2>Fair rotation, planned — not guessed.</h2>
+          <p>
+            Whole-queue planning across every court at once, winners-stay-on,
+            auto-start, and a look-ahead board — so nobody's guessing who's
+            up next, including the host.
+          </p>
+        </div>
+        <div class="feature-row__media">
+          <div class="desk-frame">
+            <img src="images/host-console.png" alt="The host console running three courts of live games with a queue of waiting players" />
+          </div>
+        </div>
+      </article>
+
+      <article class="feature-row">
+        <div class="feature-row__copy">
+          <p class="eyebrow">For players</p>
+          <h2>Skill-based matching that never fakes it.</h2>
+          <p>
+            Six ranks mapped to DUPR/UTPR bands, five pips per rank, and a
+            hard rank-gap control with four settings — Dink Deck never
+            silently starts a mismatched game.
+          </p>
+        </div>
+        <div class="feature-row__media">
+          <div class="phone-frame">
+            <img src="images/stats.png" alt="A player's stats screen showing their rank, record, win rate, and games played by day" width="280" />
+          </div>
+        </div>
+      </article>
+
+      <article class="feature-row feature-row--flip">
+        <div class="feature-row__copy">
+          <p class="eyebrow">Discovery</p>
+          <h2>Find open play near you.</h2>
+          <p>
+            Browse clubs, courts, and events. Join in a tap, or land on the
+            waitlist. Regional leaderboards by province and town, so you can
+            see where you stand.
+          </p>
+        </div>
+        <div class="feature-row__media">
+          <div class="phone-frame">
+            <img src="images/discover.png" alt="The Discover screen listing today's open play sessions, including one live now" width="280" />
+          </div>
+        </div>
+      </article>
+
+      <article class="feature-row">
+        <div class="feature-row__copy">
+          <p class="eyebrow">Built for real courts</p>
+          <h2>Built for a real night, not perfect wifi.</h2>
+          <p>
+            The board stays live while the host's device owns the queue —
+            offline-first sync means results land exactly once when the
+            connection comes back.
+          </p>
+        </div>
+        <div class="feature-row__media">
+          <div class="phone-frame">
+            <img src="images/event-live.png" alt="The live board for an open play session, showing courts in progress and who's up next" width="280" />
+          </div>
+        </div>
+      </article>
+
+      <article class="feature-row feature-row--flip">
+        <div class="feature-row__copy">
+          <p class="eyebrow">For clubs</p>
+          <h2>Your club has a home.</h2>
+          <p>
+            A club or venue profile, a court directory with hours and rates,
+            and a feed for what's actually happening tonight.
+          </p>
+        </div>
+        <div class="feature-row__media">
+          <div class="phone-frame">
+            <img src="images/club-page.png" alt="A club's public page showing its upcoming sessions and a Post a session button" width="280" />
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="how wrap">
+      <p class="eyebrow">How it works</p>
+      <h2>Three steps, one night.</h2>
+      <div class="how-steps">
+        <div class="how-step">
+          <div class="how-step__num">01</div>
+          <h3>Post a session</h3>
+          <p>A club or venue posts open play in minutes — courts, times, and who it's for.</p>
+        </div>
+        <div class="how-step">
+          <div class="how-step__num">02</div>
+          <h3>Players join from their phone</h3>
+          <p>Browse, join, or land on the waitlist. No account needed to watch the board.</p>
+        </div>
+        <div class="how-step">
+          <div class="how-step__num">03</div>
+          <h3>The host runs the queue</h3>
+          <p>Everyone rotates fairly, and ratings update on their own when the night closes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <div class="final-cta">
+        <h2>Ready to run open play the fair way?</h2>
+        <div class="hero-ctas">
+          <a class="btn btn--primary" href="https://play.dinkdeck.net/register">Get started free</a>
+          <a class="btn btn--ghost" href="https://play.dinkdeck.net/signin">Sign in</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <a class="wordmark" href="#top" aria-label="Dink Deck">
+        <svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true">
+          <rect x="0" y="0" width="64" height="64" rx="16" fill="var(--primary)" />
+          <circle cx="32" cy="32" r="21" fill="var(--primary-foreground)" />
+          <g fill="var(--primary)">
+            <circle cx="32" cy="32" r="3" /><circle cx="42.5" cy="32" r="3" />
+            <circle cx="37.2" cy="41.1" r="3" /><circle cx="26.8" cy="41.1" r="3" />
+            <circle cx="21.5" cy="32" r="3" /><circle cx="26.8" cy="22.9" r="3" />
+            <circle cx="37.2" cy="22.9" r="3" />
+            <circle cx="46.1" cy="23.9" r="2.5" /><circle cx="32" cy="15.8" r="2.5" />
+            <circle cx="17.9" cy="23.9" r="2.5" /><circle cx="17.9" cy="40.1" r="2.5" />
+            <circle cx="32" cy="48.2" r="2.5" /><circle cx="46.1" cy="40.1" r="2.5" />
+          </g>
+        </svg>
+        <span>
+          <span class="wordmark__name">Dink Deck</span>
+          <span class="wordmark__tagline">Open play, dealt right</span>
+        </span>
+      </a>
+      <div class="footer-links">
+        <a href="https://play.dinkdeck.net/signin">Sign in</a>
+        <a href="https://play.dinkdeck.net/register">Get started</a>
+      </div>
+      <p class="copyright">© 2026 Dink Deck.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
