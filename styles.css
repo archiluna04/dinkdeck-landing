@@ -331,8 +331,9 @@ button {
   gap: 20px;
 }
 
-/* A couple of wide (desk-frame) shots stacked, since side by side leaves
-   each too narrow to read. */
+/* A wide (desk-frame) shot at a taller crop than the default 240px, since a
+   1440px-wide screenshot needs more height to stay legible once squeezed
+   into a split-section column. Also stacks more than one, if ever needed. */
 .frame-stack {
   display: flex;
   flex-direction: column;
