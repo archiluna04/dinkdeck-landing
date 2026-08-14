@@ -39,6 +39,12 @@
         <span class="wordmark__name">Dink Deck</span>
         <span class="beta-badge">Beta</span>
       </a>
+      <nav class="nav-links" aria-label="Page sections">
+        <a href="#demo">Live demo</a>
+        <a href="#for-you">For hosts &amp; players</a>
+        <a href="#how">How it works</a>
+        <a href="#faq">FAQ</a>
+      </nav>
       <div class="header-actions">
         <a class="btn btn--ghost btn--sm" href="https://play.dinkdeck.net/signin">Sign in</a>
         <a class="btn btn--primary btn--sm" href="https://play.dinkdeck.net/register">Get started</a>
@@ -60,29 +66,78 @@
           </p>
           <div class="hero-ctas">
             <a class="btn btn--primary" href="https://play.dinkdeck.net/register">Get started free</a>
-            <a class="btn btn--ghost" href="#hosting">See how hosting works</a>
+            <a class="btn btn--ghost" href="#demo">See the live board</a>
           </div>
-          <div class="chip-row">
-            <span class="chip">Works on desktop &amp; mobile</span>
-            <span class="chip">No install to try it</span>
-            <span class="chip">Beta — still rolling out</span>
-          </div>
-          <p class="trust-line">
-            Runs right in the browser — tonight's queue needs no install and
-            no account to run.
-          </p>
+          <ul class="checks">
+            <li><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>No install to try it</li>
+            <li><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Desktop &amp; mobile</li>
+            <li><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>No account to watch a board</li>
+          </ul>
         </div>
         <div class="hero-visual">
-          <div class="phone-frame rise-in">
-            <img src="images/home.png" alt="Dink Deck home screen showing this week's schedule and a club post" width="300" />
+          <div class="live-board rise-in">
+            <div class="live-board__head">
+              <div>
+                <h3>Tonight's queue</h3>
+                <p>The actual demo board — not a mockup</p>
+              </div>
+              <span class="live-pill">12 waiting</span>
+            </div>
+
+            <div class="live-board__court">
+              <div>
+                <div class="live-board__court-meta">Court 1 · Up next</div>
+                <div class="live-board__names">Tom Beaumont &amp; Chloe Nguyen <span>v</span> Felix Andersen &amp; Sam Whitfield</div>
+              </div>
+              <div class="live-board__score">
+                <strong>2.45</strong>
+                <em>v 2.35</em>
+              </div>
+            </div>
+
+            <div class="live-board__court">
+              <div>
+                <div class="live-board__court-meta">Court 2 · Up next</div>
+                <div class="live-board__names">Jordan Reyes &amp; Maria Santos <span>v</span> Priya Nair &amp; Diego Herrera</div>
+              </div>
+              <div class="live-board__score">
+                <strong>3.45</strong>
+                <em>v 3.45</em>
+              </div>
+            </div>
+
+            <div class="live-board__court">
+              <div>
+                <div class="live-board__court-meta">Court 3 · Up next</div>
+                <div class="live-board__names">Aisha Rahman &amp; Lena Kowalski <span>v</span> Marcus Bell &amp; Amara Okafor</div>
+              </div>
+              <div class="live-board__score">
+                <strong>3.80</strong>
+                <em>v 3.75</em>
+              </div>
+            </div>
+
+            <div class="live-board__banner">
+              <span>Court 4 still open</span>
+              <span>4 more players fill it</span>
+            </div>
           </div>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <div class="stat-strip">
+          <div class="stat-strip__item"><strong>4 courts</strong><span>planned at once, one board</span></div>
+          <div class="stat-strip__item"><strong>12 players</strong><span>preloaded in the live demo</span></div>
+          <div class="stat-strip__item"><strong>7 ranks</strong><span>mapped to DUPR/UTPR bands</span></div>
+          <div class="stat-strip__item"><strong>0 installs</strong><span>runs in the browser</span></div>
         </div>
       </div>
     </section>
 
-    <section class="wrap">
-      <article class="feature-row feature-row--wide">
-        <div class="feature-row__copy">
+    <section class="split-section wrap" id="demo">
+      <div class="split">
+        <div class="split__copy">
           <p class="eyebrow">See it running</p>
           <h2>Try it before you host anything.</h2>
           <p>
@@ -96,103 +151,160 @@
           </ol>
           <a class="btn btn--primary" href="https://play.dinkdeck.net/register">Sign up free</a>
         </div>
-        <div class="feature-row__media">
-          <div class="desk-frame">
-            <img src="images/demo.png" alt="The live demo running: four courts seated with twelve players, ready to start games" />
+
+        <div data-tabs>
+          <div class="tabs" role="tablist" aria-label="Demo views">
+            <button class="tab-btn" type="button" data-tab="board" aria-selected="true">Live board</button>
+            <button class="tab-btn" type="button" data-tab="plan" aria-selected="false">Queue plan</button>
+            <button class="tab-btn" type="button" data-tab="stats" aria-selected="false">Your stats</button>
+          </div>
+
+          <div class="chrome-frame">
+            <div class="chrome-frame__bar">
+              <span class="chrome-frame__dots"><span></span><span></span><span></span></span>
+              <span class="chrome-frame__url">play.dinkdeck.net/host?demo=1</span>
+            </div>
+            <div class="chrome-frame__body">
+              <div data-tab-panel="board">
+                <img src="images/demo.png" alt="The live demo board: four courts, twelve players queued and ready to run" />
+              </div>
+              <div data-tab-panel="plan" hidden>
+                <ol class="queue-plan">
+                  <li data-next><span><span class="queue-plan__pos">1</span><strong>Tom Beaumont</strong></span><span class="queue-plan__tag">On next</span></li>
+                  <li data-next><span><span class="queue-plan__pos">2</span><strong>Felix Andersen</strong></span><span class="queue-plan__tag">On next</span></li>
+                  <li data-next><span><span class="queue-plan__pos">3</span><strong>Sam Whitfield</strong></span><span class="queue-plan__tag">On next</span></li>
+                  <li data-next><span><span class="queue-plan__pos">4</span><strong>Chloe Nguyen</strong></span><span class="queue-plan__tag">On next</span></li>
+                  <li><span><span class="queue-plan__pos">5</span><strong>Jordan Reyes</strong><span class="queue-plan__meta"> · then</span></span><span class="queue-plan__tag">Then</span></li>
+                  <li><span><span class="queue-plan__pos">6</span><strong>Priya Nair</strong></span><span class="queue-plan__tag">Then</span></li>
+                  <li><span><span class="queue-plan__pos">7</span><strong>Maria Santos</strong></span><span class="queue-plan__tag">Then</span></li>
+                  <li><span><span class="queue-plan__pos">8</span><strong>Diego Herrera</strong></span><span class="queue-plan__tag">Then</span></li>
+                </ol>
+              </div>
+              <div data-tab-panel="stats" hidden>
+                <img src="images/stats.png" alt="A player's stats screen showing their rank, record, win rate, and games played by day" />
+              </div>
+            </div>
           </div>
         </div>
-      </article>
+      </div>
     </section>
 
-    <section class="features wrap">
-
-      <article class="feature-row feature-row--wide feature-row--flip" id="hosting">
-        <div class="feature-row__copy">
-          <p class="eyebrow">For hosts</p>
-          <h2>Fair rotation, planned — not guessed.</h2>
-          <p>
-            Whole-queue planning across every court at once, winners-stay-on,
-            auto-start, and a look-ahead board — so nobody's guessing who's
-            up next, including the host.
-          </p>
+    <section class="split-section wrap" id="for-you" data-tabs>
+      <div class="split-section__head">
+        <div>
+          <p class="eyebrow">Built for the whole night</p>
+          <h2>Pick your side of the net.</h2>
         </div>
-        <div class="feature-row__media">
-          <div class="desk-frame">
-            <img src="images/host-console.png" alt="The host console running three courts of live games with a queue of waiting players" />
+        <div class="tabs" role="tablist" aria-label="Who this is for">
+          <button class="tab-btn" type="button" data-tab="hosts" aria-selected="true">For hosts</button>
+          <button class="tab-btn" type="button" data-tab="players" aria-selected="false">For players</button>
+          <button class="tab-btn" type="button" data-tab="clubs" aria-selected="false">For clubs</button>
+        </div>
+      </div>
+
+      <div>
+        <div class="split" data-tab-panel="hosts">
+          <div class="split__copy">
+            <h2>Fair rotation, planned — not guessed.</h2>
+            <p>
+              Whole-queue planning across every court at once, winners-stay-on,
+              auto-start, and a look-ahead board — so nobody's guessing who's
+              up next, including you.
+            </p>
+            <ul class="split__bullets">
+              <li><strong>One-tap start</strong> — courts fill themselves from the plan</li>
+              <li><strong>Sit-out fairness</strong> — games played tracked per person</li>
+              <li><strong>Payment tracking</strong> — who paid, who owes, one nudge</li>
+            </ul>
+          </div>
+          <div class="feature-row__media">
+            <div class="desk-frame">
+              <img src="images/host-console.png" alt="The host console running three courts of live games with a queue of waiting players" />
+            </div>
           </div>
         </div>
-      </article>
 
-      <article class="feature-row">
-        <div class="feature-row__copy">
-          <p class="eyebrow">For players</p>
-          <h2>Skill-based matching that never fakes it.</h2>
-          <p>
-            Six ranks mapped to DUPR/UTPR bands, five pips per rank, and a
-            hard rank-gap control with four settings — Dink Deck never
-            silently starts a mismatched game.
-          </p>
-        </div>
-        <div class="feature-row__media">
-          <div class="phone-frame">
-            <img src="images/stats.png" alt="A player's stats screen showing their rank, record, win rate, and games played by day" width="280" />
+        <div class="split" data-tab-panel="players" hidden>
+          <div class="split__copy">
+            <h2>Skill-based matching that never fakes it.</h2>
+            <p>
+              Seven ranks mapped to DUPR/UTPR bands, five pips per rank, and a
+              hard rank-gap control with four settings — Dink Deck never
+              silently starts a mismatched game.
+            </p>
+            <ul class="split__bullets">
+              <li><strong>Real record</strong> — games, win rate, streak, sessions</li>
+              <li><strong>Local ladders</strong> — leaderboards by province and town</li>
+              <li><strong>Find open play</strong> — browse nearby, join in a tap</li>
+            </ul>
+          </div>
+          <div class="feature-row__media">
+            <div class="phone-frame">
+              <img src="images/discover.png" alt="The Discover screen listing today's open play sessions, including one live now" width="280" />
+            </div>
           </div>
         </div>
-      </article>
 
-      <article class="feature-row feature-row--flip">
-        <div class="feature-row__copy">
-          <p class="eyebrow">Discovery</p>
-          <h2>Find open play near you.</h2>
-          <p>
-            Browse clubs, courts, and events. Join in a tap, or land on the
-            waitlist. Regional leaderboards by province and town, so you can
-            see where you stand.
-          </p>
-        </div>
-        <div class="feature-row__media">
-          <div class="phone-frame">
-            <img src="images/discover.png" alt="The Discover screen listing today's open play sessions, including one live now" width="280" />
+        <div class="split" data-tab-panel="clubs" hidden>
+          <div class="split__copy">
+            <h2>Your club has a home.</h2>
+            <p>
+              A club or venue profile, a court directory with hours and
+              rates, and a feed for what's actually happening tonight — so
+              regulars stop asking in the group chat.
+            </p>
+            <ul class="split__bullets">
+              <li><strong>Post in minutes</strong> — courts, times, and who it's for</li>
+              <li><strong>Members &amp; feed</strong> — notices land where players look</li>
+              <li><strong>Court directory</strong> — hours, rates, and surface for every court</li>
+            </ul>
+          </div>
+          <div class="feature-row__media">
+            <div class="phone-frame">
+              <img src="images/club-page.png" alt="A club's public page showing its upcoming sessions and a Post a session button" width="280" />
+            </div>
           </div>
         </div>
-      </article>
-
-      <article class="feature-row">
-        <div class="feature-row__copy">
-          <p class="eyebrow">Built for real courts</p>
-          <h2>Built for a real night, not perfect wifi.</h2>
-          <p>
-            The board stays live while the host's device owns the queue —
-            offline-first sync means results land exactly once when the
-            connection comes back.
-          </p>
-        </div>
-        <div class="feature-row__media">
-          <div class="phone-frame">
-            <img src="images/event-live.png" alt="The live board for an open play session, showing courts in progress and who's up next" width="280" />
-          </div>
-        </div>
-      </article>
-
-      <article class="feature-row feature-row--flip">
-        <div class="feature-row__copy">
-          <p class="eyebrow">For clubs</p>
-          <h2>Your club has a home.</h2>
-          <p>
-            A club or venue profile, a court directory with hours and rates,
-            and a feed for what's actually happening tonight.
-          </p>
-        </div>
-        <div class="feature-row__media">
-          <div class="phone-frame">
-            <img src="images/club-page.png" alt="A club's public page showing its upcoming sessions and a Post a session button" width="280" />
-          </div>
-        </div>
-      </article>
-
+      </div>
     </section>
 
-    <section class="how wrap">
+    <section class="feature-grid-section wrap">
+      <h2>Everything a real night needs.</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <span class="feature-card__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 12a8 8 0 0114-5.3M20 12a8 8 0 01-14 5.3M18 3v4h-4M6 21v-4h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3>Whole-queue planning</h3>
+          <p>Every court planned together, not one game at a time — the look-ahead board shows the next three rounds.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-card__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="0.5" fill="currentColor" stroke="currentColor"/></svg></span>
+          <h3>Rank-gap control</h3>
+          <p>Four settings decide how far apart a match may be. Mismatched games never auto-start silently.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-card__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 15a4 4 0 014-4 5 5 0 019.6-1.5A4.5 4.5 0 0120.5 17H6a3 3 0 01-3-2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M4 4l16 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+          <h3>Offline-first sync</h3>
+          <p>The host device owns the queue. Results land exactly once when the connection comes back.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-card__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M9 9.5c0-1.4 1.3-2.5 3-2.5s3 1.1 3 2.5-1.3 2-3 2.5-3 1.1-3 2.5 1.3 2.5 3 2.5 3-1.1 3-2.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+          <h3>Court fee tracking</h3>
+          <p>Split the fee, mark who paid, nudge the stragglers, attach proof of payment.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-card__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4.5-4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+          <h3>Find open play nearby</h3>
+          <p>Browse clubs, courts, and events. Join in a tap, or land on the waitlist.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-card__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 18l5-6 4 3 7-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 6h5v5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3>Ratings that update themselves</h3>
+          <p>Ranks and pips move when the night closes — no spreadsheets, no arguing.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="how wrap" id="how">
       <p class="eyebrow">How it works</p>
       <h2>Three steps, one night.</h2>
       <div class="how-steps">
@@ -214,6 +326,90 @@
       </div>
     </section>
 
+    <section class="faq-section wrap" id="faq">
+      <div class="faq-layout">
+        <div class="faq-intro">
+          <p class="eyebrow">Straight answers</p>
+          <h2>Questions hosts ask first.</h2>
+          <p>Still unsure? <a href="mailto:archi.luna04@gmail.com?subject=Question%20about%20Dink%20Deck">Ask directly</a> — a human replies.</p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-item__q" type="button" data-faq-q aria-expanded="true">
+              Do players need an account to see the board?
+              <span class="faq-item__glyph" data-faq-glyph>×</span>
+            </button>
+            <div class="faq-item__a" data-faq-a>
+              No. Anyone with the link can watch tonight's board live. An account
+              only matters if you want your record, ratings, and queue position
+              to follow you.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__q" type="button" data-faq-q aria-expanded="false">
+              What happens when the wifi drops mid-game?
+              <span class="faq-item__glyph" data-faq-glyph>+</span>
+            </button>
+            <div class="faq-item__a" data-faq-a hidden>
+              Nothing is lost. The host's device keeps the queue locally and
+              syncs results exactly once when the connection returns — never
+              twice, never a duplicate game.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__q" type="button" data-faq-q aria-expanded="false">
+              How does skill-based matching work?
+              <span class="faq-item__glyph" data-faq-glyph>+</span>
+            </button>
+            <div class="faq-item__a" data-faq-a hidden>
+              Seven ranks, five pips each. A rank-gap setting decides how wide a
+              mismatch is allowed before a game won't start — anywhere from
+              same-rank-only up to any mix.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__q" type="button" data-faq-q aria-expanded="false">
+              Can I run more than one court?
+              <span class="faq-item__glyph" data-faq-glyph>+</span>
+            </button>
+            <div class="faq-item__a" data-faq-a hidden>
+              Yes — up to 24 on one board. Every court is planned together, not
+              filled one at a time, so games start as soon as enough players
+              are free anywhere.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__q" type="button" data-faq-q aria-expanded="false">
+              Why do I need an invite code to create a club?
+              <span class="faq-item__glyph" data-faq-glyph>+</span>
+            </button>
+            <div class="faq-item__a" data-faq-a hidden>
+              It's a deliberate brake while the system is still in beta, not a
+              permission system — request one below and it's usually
+              approved the same day.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__q" type="button" data-faq-q aria-expanded="false">
+              What does it cost?
+              <span class="faq-item__glyph" data-faq-glyph>+</span>
+            </button>
+            <div class="faq-item__a" data-faq-a hidden>
+              Free to play and free to host while in beta. A club can
+              optionally track a court fee per player — that money moves
+              through GCash or cash in hand, never through the app.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="wrap">
       <div class="callout">
         <div class="callout__copy">
@@ -222,7 +418,7 @@
           <p>
             Creating a club or court needs an invite code while we're still
             in beta — a deliberate brake while things ramp up, not a
-            waitlist. Send a request and I'll approve it personally.
+            waitlist. Requests are approved personally, usually same day.
           </p>
         </div>
         <div class="callout__action">
@@ -234,6 +430,7 @@
     <section class="wrap">
       <div class="final-cta">
         <h2>Ready to run open play the fair way?</h2>
+        <p>Free while in beta. Set up tonight's session in about two minutes.</p>
         <div class="hero-ctas">
           <a class="btn btn--primary" href="https://play.dinkdeck.net/register">Get started free</a>
           <a class="btn btn--ghost" href="https://play.dinkdeck.net/signin">Sign in</a>
@@ -272,5 +469,6 @@
     </div>
   </footer>
 
+  <script src="script.js" defer></script>
 </body>
 </html>
