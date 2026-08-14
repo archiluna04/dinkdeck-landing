@@ -3,20 +3,122 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dink Deck — Pickleball Court Queue</title>
-  <meta name="description" content="Open-play court queue for pickleball. Add your courts, sign players in, and Dink Deck rotates everyone through fairly — with skill-based matching when you want the games closer." />
+  <title>Dink Deck — Pickleball Open Play Court Queue & Rotation App</title>
+  <meta name="description" content="Free pickleball open-play queue for clubs and courts. Add your courts, sign players in, and Dink Deck rotates everyone fairly, with skill-based matching when you want closer games. No install to try it." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://dinkdeck.net/" />
+  <meta name="theme-color" content="#0b100e" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Dink Deck — Pickleball Court Queue" />
-  <meta property="og:description" content="Open-play court queue for pickleball. Add your courts, sign players in, and Dink Deck rotates everyone through fairly — with skill-based matching when you want the games closer." />
+  <meta property="og:url" content="https://dinkdeck.net/" />
+  <meta property="og:site_name" content="Dink Deck" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Dink Deck — Pickleball Open Play Court Queue & Rotation App" />
+  <meta property="og:description" content="Free pickleball open-play queue for clubs and courts. Add your courts, sign players in, and Dink Deck rotates everyone fairly, with skill-based matching when you want closer games." />
   <meta property="og:image" content="https://dinkdeck.net/images/host-console.png" />
+  <meta property="og:image:width" content="1440" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="The Dink Deck host console running three courts of live games with a queue of waiting players" />
+
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Dink Deck — Pickleball Open Play Court Queue & Rotation App" />
+  <meta name="twitter:description" content="Free pickleball open-play queue for clubs and courts. Rotates everyone fairly, with skill-based matching when you want closer games. No install to try it." />
+  <meta name="twitter:image" content="https://dinkdeck.net/images/host-console.png" />
+  <meta name="twitter:image:alt" content="The Dink Deck host console running three courts of live games with a queue of waiting players" />
 
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://dinkdeck.net/#app",
+        "name": "Dink Deck",
+        "url": "https://dinkdeck.net/",
+        "description": "A fair, skill-matched open-play court queue for pickleball clubs and courts. Rotates players through automatically, with optional skill-based matching, offline-first sync, and Top 100 leaderboards.",
+        "applicationCategory": "SportsApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "PHP"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://dinkdeck.net/#org",
+        "name": "Dink Deck",
+        "url": "https://dinkdeck.net/",
+        "logo": "https://dinkdeck.net/favicon.svg",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "archi.luna04@gmail.com",
+          "contactType": "customer support"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://dinkdeck.net/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do players need an account to see the board?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Anyone with the link can watch tonight's board live. An account only matters if you want your record, ratings, and queue position to follow you."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What happens when the wifi drops mid-game?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nothing is lost. The host's device keeps the queue locally and syncs results exactly once when the connection returns — never twice, never a duplicate game."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does skill-based matching work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Seven ranks, five pips each. A rank-gap setting decides how wide a mismatch is allowed before a game won't start — anywhere from same-rank-only up to any mix."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I run more than one court?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes — up to 24 on one board. Every court is planned together, not filled one at a time, so games start as soon as enough players are free anywhere."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why do I need an invite code to create a club?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It's a deliberate brake while the system is still in beta, not a permission system — request one and it's usually approved the same day."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does it cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Free to play and free to host while in beta. A club can optionally track a court fee per player — that money moves through GCash or cash in hand, never through the app."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -166,7 +268,7 @@
             </div>
             <div class="chrome-frame__body">
               <div data-tab-panel="board">
-                <img src="images/demo.png" alt="The live demo board: four courts, twelve players queued and ready to run" />
+                <img src="images/demo.png" alt="The live demo board: four courts, twelve players queued and ready to run" width="1280" height="900" loading="lazy" decoding="async" />
               </div>
               <div data-tab-panel="plan" hidden>
                 <ol class="queue-plan">
@@ -181,7 +283,7 @@
                 </ol>
               </div>
               <div data-tab-panel="stats" hidden>
-                <img src="images/stats.png" alt="A player's stats screen showing their rank, record, win rate, and games played by day" />
+                <img src="images/stats.png" alt="A player's stats screen showing their rank, record, win rate, and games played by day" width="390" height="844" loading="lazy" decoding="async" />
               </div>
             </div>
           </div>
@@ -219,7 +321,7 @@
           </div>
           <div class="feature-row__media">
             <div class="desk-frame">
-              <img src="images/host-console.png" alt="The host console running three courts of live games with a queue of waiting players" />
+              <img src="images/host-console.png" alt="The host console running three courts of live games with a queue of waiting players" width="1440" height="900" loading="lazy" decoding="async" />
             </div>
           </div>
         </div>
@@ -240,7 +342,7 @@
           </div>
           <div class="feature-row__media">
             <div class="phone-frame">
-              <img src="images/discover.png" alt="The Discover screen listing today's open play sessions, including one live now" width="280" />
+              <img src="images/discover.png" alt="The Discover screen listing today's open play sessions, including one live now" width="390" height="844" loading="lazy" decoding="async" />
             </div>
           </div>
         </div>
@@ -261,7 +363,7 @@
           </div>
           <div class="feature-row__media">
             <div class="phone-frame">
-              <img src="images/club-page.png" alt="A club's public page showing its upcoming sessions and a Post a session button" width="280" />
+              <img src="images/club-page.png" alt="A club's public page showing its upcoming sessions and a Post a session button" width="390" height="844" loading="lazy" decoding="async" />
             </div>
           </div>
         </div>
@@ -285,7 +387,7 @@
         </div>
         <div class="frame-stack">
           <div class="desk-frame">
-            <img src="images/medals.png" alt="The rank medal chart, showing the seven-rank ladder and Pro+ tiers up to Top 10" />
+            <img src="images/medals.png" alt="The rank medal chart, showing the seven-rank ladder and Pro+ tiers up to Top 10" width="1440" height="900" loading="lazy" decoding="async" />
           </div>
         </div>
       </div>

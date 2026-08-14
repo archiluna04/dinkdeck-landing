@@ -15,3 +15,7 @@ npx serve .
 ## Screenshots
 
 `images/*.png` are real product screenshots, captured against a seeded demo fixture (realistic club/player data, no test artifacts) rather than hand-mocked.
+
+## SEO
+
+The canonical URL, `sitemap.xml`, `robots.txt`, and every Open Graph/Twitter/JSON-LD URL are hardcoded to `https://dinkdeck.net`. If this ever deploys somewhere else (a different domain, a `www.` subdomain, a staging URL), all of those need updating together — a mismatched canonical actively hurts ranking rather than just being a no-op.
