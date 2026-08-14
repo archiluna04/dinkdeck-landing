@@ -995,6 +995,117 @@ button {
 
 /* ---------- final CTA ---------- */
 
+/* ---------- forms ---------- */
+
+.form-section {
+  padding: 64px 0;
+  border-top: 1px solid var(--border);
+}
+
+.form-card {
+  border: 1px solid var(--border);
+  background: var(--card);
+  border-radius: var(--radius-2xl);
+  padding: 28px;
+}
+
+.form-card h2 {
+  font-family: var(--font-display);
+  font-size: clamp(21px, 3vw, 26px);
+  letter-spacing: -0.01em;
+  margin: 8px 0 10px;
+}
+
+.form-card > p {
+  color: var(--muted-foreground);
+  font-size: 14.5px;
+  line-height: 1.55;
+  margin: 0 0 22px;
+  max-width: 58ch;
+}
+
+.field-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+@media (min-width: 640px) {
+  .field-grid--2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.field label {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  background: var(--inset);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  color: var(--foreground);
+  font: inherit;
+  font-size: 14px;
+  padding: 11px 13px;
+  outline: none;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: color-mix(in oklab, var(--primary) 55%, transparent);
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 110px;
+  line-height: 1.5;
+}
+
+/* The honeypot. Not `display:none` — some bots skip hidden inputs, and the
+   ones worth catching fill everything they can reach. Kept off-screen and
+   out of the tab order instead, so no real person ever meets it. */
+.hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.form-note {
+  font-size: 12.5px;
+  margin: 0;
+}
+
+.form-note--ok {
+  color: var(--lime-ink);
+  font-weight: 600;
+}
+
+.form-note--bad {
+  color: var(--flag);
+  font-weight: 600;
+}
+
+.form-note--quiet {
+  color: var(--muted-foreground);
+}
+
 .final-cta {
   margin: 40px 0;
   padding: 64px 24px;

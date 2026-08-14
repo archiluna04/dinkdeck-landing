@@ -146,6 +146,7 @@
         <a href="#for-you">For hosts &amp; players</a>
         <a href="#how">How it works</a>
         <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
       </nav>
       <div class="header-actions">
         <a class="btn btn--ghost btn--sm" href="https://play.dinkdeck.net/signin">Sign in</a>
@@ -456,7 +457,7 @@
         <div class="faq-intro">
           <p class="eyebrow">Straight answers</p>
           <h2>Questions hosts ask first.</h2>
-          <p>Still unsure? <a href="mailto:archi.luna04@gmail.com?subject=Question%20about%20Dink%20Deck">Ask directly</a> — a human replies.</p>
+          <p>Still unsure? <a href="#contact">Ask directly</a> — a human replies.</p>
         </div>
 
         <div class="faq-list">
@@ -535,20 +536,83 @@
       </div>
     </section>
 
-    <section class="wrap">
-      <div class="callout">
-        <div class="callout__copy">
-          <p class="eyebrow">For clubs &amp; courts</p>
-          <h2>Want to run your own open play?</h2>
-          <p>
-            Creating a club or court needs an invite code while we're still
-            in beta — a deliberate brake while things ramp up, not a
-            waitlist. Requests are approved personally, usually same day.
-          </p>
-        </div>
-        <div class="callout__action">
-          <a class="btn btn--ghost" href="mailto:archi.luna04@gmail.com?subject=Dink%20Deck%20invite%20code%20request">Request an invite</a>
-        </div>
+    <section class="form-section wrap" id="invite">
+      <div class="form-card">
+        <p class="eyebrow">For clubs &amp; courts</p>
+        <h2>Request an invite code.</h2>
+        <p>
+          Creating a club or court needs an invite code while we're still in
+          beta — a deliberate brake while things ramp up, not a waitlist.
+          Requests are approved personally, usually same day.
+        </p>
+        <form data-submission-form data-kind="inviteRequest" novalidate>
+          <div class="field-grid field-grid--2">
+            <div class="field">
+              <label for="invite-name">Your name</label>
+              <input id="invite-name" name="name" type="text" required maxlength="120" autocomplete="name" />
+            </div>
+            <div class="field">
+              <label for="invite-email">Email</label>
+              <input id="invite-email" name="email" type="email" required maxlength="200" autocomplete="email" />
+            </div>
+            <div class="field">
+              <label for="invite-org">Club or court name</label>
+              <input id="invite-org" name="organizationName" type="text" maxlength="160" />
+            </div>
+            <div class="field">
+              <label for="invite-location">Where you play</label>
+              <input id="invite-location" name="location" type="text" maxlength="160" placeholder="Town, province" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="invite-message">Tell us about your open play</label>
+            <textarea id="invite-message" name="message" required minlength="10" maxlength="4000"
+              placeholder="How often you run, roughly how many players, how many courts."></textarea>
+          </div>
+          <div class="hp" aria-hidden="true">
+            <label for="invite-website">Leave this empty</label>
+            <input id="invite-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+          </div>
+          <div class="form-actions">
+            <button class="btn btn--primary" type="submit" data-submit>Request an invite</button>
+            <p class="form-note form-note--quiet" data-note>A human reads every one of these.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="form-section wrap" id="contact">
+      <div class="form-card">
+        <p class="eyebrow">Contact</p>
+        <h2>Ask us anything.</h2>
+        <p>
+          Something the FAQ didn't cover, a problem you hit, or an idea for
+          what Dink Deck should do next.
+        </p>
+        <form data-submission-form data-kind="question" novalidate>
+          <div class="field-grid field-grid--2">
+            <div class="field">
+              <label for="contact-name">Your name</label>
+              <input id="contact-name" name="name" type="text" required maxlength="120" autocomplete="name" />
+            </div>
+            <div class="field">
+              <label for="contact-email">Email</label>
+              <input id="contact-email" name="email" type="email" required maxlength="200" autocomplete="email" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="contact-message">Your question</label>
+            <textarea id="contact-message" name="message" required minlength="10" maxlength="4000"></textarea>
+          </div>
+          <div class="hp" aria-hidden="true">
+            <label for="contact-website">Leave this empty</label>
+            <input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+          </div>
+          <div class="form-actions">
+            <button class="btn btn--primary" type="submit" data-submit>Send</button>
+            <p class="form-note form-note--quiet" data-note>We reply by email.</p>
+          </div>
+        </form>
       </div>
     </section>
 
@@ -587,6 +651,7 @@
         </span>
       </a>
       <div class="footer-links">
+        <a href="#contact">Contact</a>
         <a href="https://play.dinkdeck.net/signin">Sign in</a>
         <a href="https://play.dinkdeck.net/register">Get started</a>
       </div>
