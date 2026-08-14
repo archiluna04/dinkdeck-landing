@@ -331,6 +331,19 @@ button {
   gap: 20px;
 }
 
+/* A couple of wide (desk-frame) shots stacked, since side by side leaves
+   each too narrow to read. */
+.frame-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+}
+
+.frame-stack .desk-frame img {
+  height: 420px;
+}
+
 /* ---------- hero live-board card ---------- */
 
 .live-board {
