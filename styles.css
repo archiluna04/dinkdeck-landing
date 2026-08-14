@@ -323,6 +323,14 @@ button {
   object-position: top;
 }
 
+/* A tab/split panel's media slot — one frame, or a couple side by side. */
+.feature-row__media {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
 /* ---------- hero live-board card ---------- */
 
 .live-board {
