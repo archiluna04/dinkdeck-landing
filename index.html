@@ -41,7 +41,7 @@
         "@id": "https://dinkdeck.net/#app",
         "name": "Dink Deck",
         "url": "https://dinkdeck.net/",
-        "description": "A fair, skill-matched open-play court queue for pickleball clubs and courts. Rotates players through automatically, with optional skill-based matching, offline-first sync, and Top 100 leaderboards.",
+        "description": "A fair, skill-matched open-play court queue for pickleball clubs and courts. Rotates players through automatically, with optional skill-based matching, a king-of-the-court challenger court, night recaps, offline-first sync, and Top 100 leaderboards.",
         "applicationCategory": "SportsApplication",
         "operatingSystem": "Web",
         "offers": {
@@ -87,7 +87,15 @@
             "name": "How does skill-based matching work?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Seven ranks, five pips each. A rank-gap setting decides how wide a mismatch is allowed before a game won't start — anywhere from same-rank-only up to any mix."
+              "text": "Seven ranks, five pips each, mapped to the DUPR/UTPR bands. A skill-range setting — tight, balanced, loose, or any mix — decides how wide a game may be. If the board has to stretch the range to keep somebody from sitting out all night, it says so right on the board."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the challenger court?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "One court can be set aside as king of the court. Pairs join its line together and are never split, short games run to 9 points, winners stay on to defend, and the first pair to the target takes the crown. The regular rotation plans around it."
             }
           },
           {
@@ -111,7 +119,7 @@
             "name": "What does it cost?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Free to play and free to host while in beta. A club can optionally track a court fee per player — that money moves through GCash or cash in hand, never through the app."
+              "text": "Free to play and free to host while in beta — everything is open. When beta ends there will be two plans, Player and Host, at prices still to be announced, with extra free months on top — and nobody is charged without being asked first. Court fees a club tracks move through GCash or cash in hand, never through the app."
             }
           }
         ]
@@ -245,14 +253,14 @@
           <h2>Try it before you host anything.</h2>
           <p>
             This is the actual console, already loaded with twelve players
-            across four courts — no setup, nothing to configure.
+            across four courts — no account, no setup, nothing to configure.
           </p>
           <ol class="steps">
-            <li><span class="steps__num">1</span><span><strong>Sign up free</strong> — or sign in if you already have an account</span></li>
-            <li><span class="steps__num">2</span><span>Tap <strong>You</strong> in the bottom navigation</span></li>
-            <li><span class="steps__num">3</span><span>Tap <strong>"See a live demo"</strong> — twelve players are already queued, ready to run</span></li>
+            <li><span class="steps__num">1</span><span><strong>Open the demo</strong> — it runs in your browser, nothing to install</span></li>
+            <li><span class="steps__num">2</span><span><strong>Take the walkthrough</strong> — it offers itself and shows you the desk</span></li>
+            <li><span class="steps__num">3</span><span><strong>Run the night</strong> — start games, rearrange the rotation, try the challenger court</span></li>
           </ol>
-          <a class="btn btn--primary" href="https://play.dinkdeck.net/register">Sign up free</a>
+          <a class="btn btn--primary" href="https://play.dinkdeck.net/host?demo=1">Open the live demo</a>
         </div>
 
         <div data-tabs>
@@ -311,12 +319,13 @@
             <h2>Fair rotation, planned — not guessed.</h2>
             <p>
               Whole-queue planning across every court at once, winners-stay-on,
-              auto-start, and a look-ahead board — so nobody's guessing who's
-              up next, including you.
+              auto-start, and a board that lays out the whole night's rotation
+              in fours — so nobody's guessing who's up next, including you.
             </p>
             <ul class="split__bullets">
               <li><strong>One-tap start</strong> — courts fill themselves from the plan</li>
-              <li><strong>Sit-out fairness</strong> — games played tracked per person</li>
+              <li><strong>Rearrange by hand</strong> — reshape the rotation yourself, and it sticks</li>
+              <li><strong>Served in order</strong> — fewest games first, and nobody drives home having played nothing</li>
               <li><strong>Payment tracking</strong> — who paid, who owes, one nudge</li>
             </ul>
           </div>
@@ -332,11 +341,12 @@
             <h2>Skill-based matching that never fakes it.</h2>
             <p>
               Seven ranks mapped to DUPR/UTPR bands, five pips per rank, and a
-              hard rank-gap control with four settings — Dink Deck never
-              silently starts a mismatched game.
+              skill-range control from tight to any mix — when the board
+              stretches the range to keep someone in the night, it says so
+              on its face.
             </p>
             <ul class="split__bullets">
-              <li><strong>Real record</strong> — games, win rate, streak, sessions</li>
+              <li><strong>Real record</strong> — games, win rate, streak, and what each night did to your rating</li>
               <li><strong>Local ladders</strong> — leaderboards by province and town</li>
               <li><strong>Find open play</strong> — browse nearby, join in a tap</li>
             </ul>
@@ -357,9 +367,9 @@
               regulars stop asking in the group chat.
             </p>
             <ul class="split__bullets">
-              <li><strong>Post in minutes</strong> — courts, times, and who it's for</li>
+              <li><strong>Post in three steps</strong> — preview it first, edit it after, cap included</li>
               <li><strong>Members &amp; feed</strong> — notices land where players look</li>
-              <li><strong>Court directory</strong> — hours, rates, and surface for every court</li>
+              <li><strong>Every night remembered</strong> — played nights stay on the page, each with its recap</li>
             </ul>
           </div>
           <div class="feature-row__media">
@@ -400,12 +410,12 @@
         <div class="feature-card">
           <span class="feature-card__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 12a8 8 0 0114-5.3M20 12a8 8 0 01-14 5.3M18 3v4h-4M6 21v-4h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           <h3>Whole-queue planning</h3>
-          <p>Every court planned together, not one game at a time — the look-ahead board shows the next three rounds.</p>
+          <p>Every court planned together, not one game at a time — the board lays out the whole rotation in fours, and you can rearrange it by hand.</p>
         </div>
         <div class="feature-card">
           <span class="feature-card__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="0.5" fill="currentColor" stroke="currentColor"/></svg></span>
-          <h3>Rank-gap control</h3>
-          <p>Four settings decide how far apart a match may be. Mismatched games never auto-start silently.</p>
+          <h3>Skill-range control</h3>
+          <p>Four settings, tight to any mix, decide how wide a game may be. When the board stretches the range to keep someone playing, it says so.</p>
         </div>
         <div class="feature-card">
           <span class="feature-card__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 15a4 4 0 014-4 5 5 0 019.6-1.5A4.5 4.5 0 0120.5 17H6a3 3 0 01-3-2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M4 4l16 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
@@ -415,7 +425,7 @@
         <div class="feature-card">
           <span class="feature-card__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M9 9.5c0-1.4 1.3-2.5 3-2.5s3 1.1 3 2.5-1.3 2-3 2.5-3 1.1-3 2.5 1.3 2.5 3 2.5 3-1.1 3-2.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
           <h3>Court fee tracking</h3>
-          <p>Split the fee, mark who paid, nudge the stragglers, attach proof of payment.</p>
+          <p>Save your club's payment details once and reuse them every night. Mark who paid, nudge the stragglers — unpaid places free themselves up.</p>
         </div>
         <div class="feature-card">
           <span class="feature-card__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4.5-4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
@@ -426,6 +436,21 @@
           <span class="feature-card__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 18l5-6 4 3 7-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 6h5v5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           <h3>Ratings that update themselves</h3>
           <p>Ranks and pips move when the night closes — no spreadsheets, no arguing.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-card__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 18h16M5 16l-1.2-8 5.2 3.5L12 5l3 6.5L20.2 8 19 16H5z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>
+          <h3>Challenger court</h3>
+          <p>Set one court aside as king of the court. Pairs join its line together, winners stay on to defend, and a run of wins takes the crown.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-card__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="5" y="3" width="14" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M9 8h6M9 12h6M9 16h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+          <h3>Night recaps</h3>
+          <p>Close the night and it becomes a page worth sharing — the games, the standings, and what the night did to each rating.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-card__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="10" cy="8" r="3.5" stroke="currentColor" stroke-width="2"/><path d="M4 20c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M19 5v6M16 8h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+          <h3>Walk-ups welcome</h3>
+          <p>A guest is added at the desk in seconds, and requests to join land right at the top — even a name typed wrong is fixed without losing their place.</p>
         </div>
       </div>
     </section>
@@ -447,7 +472,7 @@
         <div class="how-step">
           <div class="how-step__num">03</div>
           <h3>The host runs the queue</h3>
-          <p>Everyone rotates fairly, and ratings update on their own when the night closes.</p>
+          <p>Everyone rotates fairly, ratings update on their own, and the night closes into a recap worth sharing.</p>
         </div>
       </div>
     </section>
@@ -491,9 +516,24 @@
               <span class="faq-item__glyph" data-faq-glyph>+</span>
             </button>
             <div class="faq-item__a" data-faq-a hidden>
-              Seven ranks, five pips each. A rank-gap setting decides how wide a
-              mismatch is allowed before a game won't start — anywhere from
-              same-rank-only up to any mix.
+              Seven ranks, five pips each, mapped to the DUPR/UTPR bands. A
+              skill-range setting — tight, balanced, loose, or any mix —
+              decides how wide a game may be. If the board has to stretch the
+              range to keep somebody from sitting out all night, it says so
+              right on the board.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__q" type="button" data-faq-q aria-expanded="false">
+              What is the challenger court?
+              <span class="faq-item__glyph" data-faq-glyph>+</span>
+            </button>
+            <div class="faq-item__a" data-faq-a hidden>
+              One court can be set aside as king of the court. Pairs join its
+              line together and are never split, short games run to 9 points,
+              winners stay on to defend, and the first pair to the target
+              takes the crown. The regular rotation plans around it.
             </div>
           </div>
 
@@ -527,9 +567,12 @@
               <span class="faq-item__glyph" data-faq-glyph>+</span>
             </button>
             <div class="faq-item__a" data-faq-a hidden>
-              Free to play and free to host while in beta. A club can
-              optionally track a court fee per player — that money moves
-              through GCash or cash in hand, never through the app.
+              Free to play and free to host while in beta — everything is
+              open. When beta ends there will be two plans, Player and Host,
+              at prices still to be announced, with extra free months on top —
+              and nobody is charged without being asked first. Court fees a
+              club tracks move through GCash or cash in hand, never through
+              the app.
             </div>
           </div>
         </div>
