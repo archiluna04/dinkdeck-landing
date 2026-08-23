@@ -111,7 +111,7 @@
             "name": "Why do I need an invite code to create a club?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "It's a deliberate brake while the system is still in beta, not a permission system — request one and it's usually approved the same day."
+              "text": "It's a deliberate brake while the system is still in beta, not a permission system — ask for one through the contact form and it's usually approved the same day."
             }
           },
           {
@@ -556,8 +556,9 @@
             </button>
             <div class="faq-item__a" data-faq-a hidden>
               It's a deliberate brake while the system is still in beta, not a
-              permission system — request one below and it's usually
-              approved the same day.
+              permission system — ask for one through the
+              <a href="#contact">contact form</a> and it's usually approved
+              the same day.
             </div>
           </div>
 
@@ -576,51 +577,6 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="form-section wrap" id="invite">
-      <div class="form-card">
-        <p class="eyebrow">For clubs &amp; courts</p>
-        <h2>Request an invite code.</h2>
-        <p>
-          Creating a club or court needs an invite code while we're still in
-          beta — a deliberate brake while things ramp up, not a waitlist.
-          Requests are approved personally, usually same day.
-        </p>
-        <form data-submission-form data-kind="inviteRequest" novalidate>
-          <div class="field-grid field-grid--2">
-            <div class="field">
-              <label for="invite-name">Your name</label>
-              <input id="invite-name" name="name" type="text" required maxlength="120" autocomplete="name" />
-            </div>
-            <div class="field">
-              <label for="invite-email">Email</label>
-              <input id="invite-email" name="email" type="email" required maxlength="200" autocomplete="email" />
-            </div>
-            <div class="field">
-              <label for="invite-org">Club or court name</label>
-              <input id="invite-org" name="organizationName" type="text" maxlength="160" />
-            </div>
-            <div class="field">
-              <label for="invite-location">Where you play</label>
-              <input id="invite-location" name="location" type="text" maxlength="160" placeholder="Town, province" />
-            </div>
-          </div>
-          <div class="field">
-            <label for="invite-message">Tell us about your open play</label>
-            <textarea id="invite-message" name="message" required minlength="10" maxlength="4000"
-              placeholder="How often you run, roughly how many players, how many courts."></textarea>
-          </div>
-          <div class="hp" aria-hidden="true">
-            <label for="invite-website">Leave this empty</label>
-            <input id="invite-website" name="website" type="text" tabindex="-1" autocomplete="off" />
-          </div>
-          <div class="form-actions">
-            <button class="btn btn--primary" type="submit" data-submit>Request an invite</button>
-            <p class="form-note form-note--quiet" data-note>A human reads every one of these.</p>
-          </div>
-        </form>
       </div>
     </section>
 
