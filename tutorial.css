@@ -1,0 +1,583 @@
+/* Dink Deck — the tutorial page.
+
+   Built by docs/build-landing-guide.mjs in the app repo. Everything here uses
+   the tokens styles.css already defines, so the page cannot drift away from
+   the rest of the site: change a colour there and this follows.
+
+   Only the pieces the landing page has no equivalent for live here — a step,
+   a device frame, and the panel that opens a screenshot big enough to read. */
+
+.tut-hero {
+  padding-bottom: 40px;
+}
+
+.tut-facts {
+  list-style: none;
+  margin: 26px 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 34px;
+}
+
+.tut-facts li {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.tut-facts b {
+  font-family: var(--font-mono);
+  font-size: 17px;
+  font-variant-numeric: tabular-nums;
+}
+
+.tut-facts span {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+
+/* ---------- chapter rail ---------- */
+
+.tut-nav {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: color-mix(in oklab, var(--background) 88%, transparent);
+  backdrop-filter: blur(14px);
+  border-block: 1px solid var(--border);
+}
+
+.tut-nav ol {
+  list-style: none;
+  display: flex;
+  gap: 4px;
+  margin: 0;
+  padding: 8px 0;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.tut-nav a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  white-space: nowrap;
+  padding: 7px 13px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--muted-foreground);
+}
+
+.tut-nav a i {
+  font-family: var(--font-mono);
+  font-style: normal;
+  font-size: 12px;
+}
+
+.tut-nav a:hover {
+  background: var(--card);
+  color: var(--foreground);
+}
+
+/* ---------- the read ---------- */
+
+.tut-body {
+  padding-bottom: 40px;
+}
+
+.tut-body h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(24px, 4vw, 34px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.tut-intro {
+  padding: 48px 0 0;
+  max-width: 60ch;
+  display: grid;
+  gap: 14px;
+}
+
+.tut-intro p,
+.tut-chapter__blurb,
+.tut-ref__lede,
+.tut-ref__note {
+  margin: 0;
+  color: var(--muted-foreground);
+  line-height: 1.62;
+  max-width: 60ch;
+}
+
+.tut-chapter {
+  padding-top: clamp(56px, 8vw, 92px);
+  scroll-margin-top: 72px;
+}
+
+.tut-chapter__top {
+  display: grid;
+  gap: 28px;
+  align-items: start;
+}
+
+.tut-chapter__top header .eyebrow {
+  color: var(--lime-ink);
+}
+
+.tut-chapter__top h2 {
+  margin: 8px 0 10px;
+}
+
+.tut-clip {
+  margin: 0;
+}
+
+.tut-clip video {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--border);
+  background: var(--background);
+  box-shadow: 0 24px 60px -24px rgba(0, 0, 0, 0.7);
+}
+
+.tut-clip--phone video {
+  max-width: 390px;
+  aspect-ratio: 390 / 844;
+  border-radius: 22px;
+  margin-inline: auto;
+}
+
+.tut-clip--desk video {
+  width: 100%;
+  aspect-ratio: 1280 / 820;
+  border-radius: 14px;
+}
+
+.tut-clip figcaption {
+  margin-top: 10px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted-foreground);
+}
+
+.tut-clip--phone figcaption {
+  max-width: 390px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.tut-group {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+  margin: clamp(40px, 6vw, 64px) 0 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.tut-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tut-step {
+  display: grid;
+  gap: 22px;
+  align-items: start;
+  padding: clamp(26px, 4vw, 38px) 0;
+  border-top: 1px solid var(--border);
+  scroll-margin-top: 72px;
+}
+
+.tut-step:first-child {
+  border-top: 0;
+}
+
+.tut-step__copy {
+  max-width: 56ch;
+  display: grid;
+  gap: 10px;
+}
+
+.tut-step__meta {
+  display: flex;
+  align-items: baseline;
+  gap: 11px;
+  margin: 0;
+}
+
+.tut-step__n {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--lime-ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.tut-step__meta code {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted-foreground);
+  background: var(--inset);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 2px 7px;
+}
+
+.tut-step h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.tut-step__copy p {
+  margin: 0;
+  color: var(--muted-foreground);
+  line-height: 1.62;
+}
+
+.tut-step__copy b {
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+.tut-note {
+  border-left: 2px solid var(--flag);
+  background: color-mix(in oklab, var(--flag) 9%, transparent);
+  padding: 10px 14px;
+  border-radius: 0 10px 10px 0;
+  font-size: 14px;
+}
+
+/* ---------- device frames ---------- */
+
+.tut-shot {
+  margin: 0;
+}
+
+.tut-frame {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  overflow: hidden;
+  background: var(--background);
+  border: 1px solid var(--border);
+  box-shadow: 0 24px 60px -24px rgba(0, 0, 0, 0.7);
+  cursor: zoom-in;
+}
+
+.tut-frame img {
+  display: block;
+  width: 100%;
+}
+
+.tut-frame--phone {
+  max-width: 268px;
+  margin-inline: auto;
+  border-radius: 22px;
+  padding: 5px;
+}
+
+.tut-frame--phone img {
+  border-radius: 18px;
+}
+
+.tut-frame--desk {
+  border-radius: 14px;
+  padding: 4px;
+}
+
+.tut-frame--desk img {
+  border-radius: 11px;
+}
+
+/* Several screens tall: show the top and let it be opened. */
+.tut-frame--tall {
+  max-height: 58vh;
+}
+
+.tut-frame--tall::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 84px;
+  pointer-events: none;
+  background: linear-gradient(to bottom, transparent, var(--background));
+}
+
+/* The way on, at the point somebody has finished reading. */
+
+.tut-onward {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-top: clamp(28px, 4vw, 44px);
+  padding: 16px 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  background: var(--card);
+  text-decoration: none;
+}
+
+.tut-onward:hover {
+  border-color: var(--lime-ink);
+}
+
+.tut-onward__label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+  flex: none;
+}
+
+.tut-onward__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.tut-onward__arrow {
+  margin-left: auto;
+  color: var(--lime-ink);
+  font-size: 18px;
+}
+
+.tut-tablewrap .where {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--lime-ink);
+  white-space: nowrap;
+}
+
+/* ---------- the clip, on the landing page ---------- */
+
+.tut-showcase {
+  padding: clamp(48px, 7vw, 84px) 20px;
+  display: grid;
+  gap: 32px;
+  align-items: center;
+}
+
+.tut-showcase h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(26px, 4.4vw, 38px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 10px 0 14px;
+  text-wrap: balance;
+}
+
+.tut-showcase p {
+  margin: 0 0 24px;
+  color: var(--muted-foreground);
+  line-height: 1.6;
+  max-width: 52ch;
+}
+
+.tut-showcase .tut-facts {
+  margin-top: 22px;
+}
+
+@media (min-width: 900px) {
+  .tut-showcase {
+    grid-template-columns: minmax(0, 1fr) 340px;
+    gap: 56px;
+  }
+}
+
+/* ---------- reference ---------- */
+
+.tut-ref {
+  padding-top: clamp(56px, 8vw, 92px);
+  scroll-margin-top: 72px;
+}
+
+.tut-ref h2 {
+  margin-bottom: 12px;
+}
+
+.tut-ref__note {
+  margin-top: 18px;
+}
+
+.tut-tablewrap {
+  margin-top: 22px;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  background: var(--card);
+}
+
+.tut-tablewrap table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 34rem;
+}
+
+.tut-tablewrap caption {
+  text-align: left;
+  padding: 14px 16px 0;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+
+.tut-tablewrap th,
+.tut-tablewrap td {
+  text-align: left;
+  padding: 11px 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 14.5px;
+  vertical-align: top;
+  color: var(--muted-foreground);
+}
+
+.tut-tablewrap tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.tut-tablewrap th {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.tut-tablewrap .pip {
+  font-family: var(--font-mono);
+  color: var(--lime-ink);
+  font-variant-numeric: tabular-nums;
+  width: 3rem;
+}
+
+.tut-tablewrap .rank,
+.tut-tablewrap .name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--foreground);
+  white-space: nowrap;
+}
+
+.tut-tablewrap .band {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  color: var(--foreground);
+}
+
+.tut-tablewrap .route code {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--lime-ink);
+}
+
+/* ---------- closing ---------- */
+
+.tut-cta {
+  margin-top: clamp(56px, 8vw, 92px);
+  padding: clamp(28px, 4vw, 40px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-2xl);
+  background: var(--card);
+}
+
+.tut-cta p {
+  margin: 10px 0 22px;
+  color: var(--muted-foreground);
+  max-width: 52ch;
+}
+
+.tut-cta .hero-ctas {
+  margin-bottom: 0;
+}
+
+/* ---------- opening a screenshot ---------- */
+
+.tut-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  padding: clamp(12px, 3vw, 32px);
+  background: color-mix(in oklab, var(--background) 90%, transparent);
+  backdrop-filter: blur(6px);
+  overflow: auto;
+  cursor: zoom-out;
+}
+
+.tut-lightbox[hidden] {
+  display: none;
+}
+
+.tut-lightbox img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+}
+
+.tut-lightbox--desk img {
+  max-width: 1280px;
+  border-radius: 12px;
+}
+
+.tut-lightbox__close {
+  position: sticky;
+  top: 0;
+  margin-left: auto;
+  display: block;
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--foreground);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* ---------- wide ---------- */
+
+@media (min-width: 900px) {
+  .tut-chapter__top--phone {
+    grid-template-columns: minmax(0, 1fr) 390px;
+  }
+
+  .tut-step--phone {
+    grid-template-columns: minmax(0, 1fr) 268px;
+    gap: 44px;
+    align-items: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

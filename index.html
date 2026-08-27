@@ -31,6 +31,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="tutorial.css" />
 
   <script type="application/ld+json">
   {
@@ -119,7 +120,7 @@
             "name": "What does it cost?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Free to play and free to host while in beta — everything is open. When beta ends there will be two plans, Player and Host, at prices still to be announced, with extra free months on top — and nobody is charged without being asked first. Court fees a club tracks move through GCash or cash in hand, never through the app."
+              "text": "Free — everything is open, for players and for clubs alike. Nobody is ever charged without being asked first. What you pay for a session is the club's own fee — it moves through GCash or cash in hand, never through the app."
             }
           }
         ]
@@ -153,6 +154,7 @@
         <a href="#demo">Live demo</a>
         <a href="#for-you">For hosts &amp; players</a>
         <a href="#how">How it works</a>
+        <a href="tutorial.html">Tutorial</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -173,13 +175,15 @@
           <p class="lede">
             Add your courts, sign players in, and Dink Deck rotates everyone
             through fairly — with skill-based matching when you want the
-            games closer.
+            games closer. Players get a rank that follows them from club to
+            club, and a recap of every night they play.
           </p>
           <div class="hero-ctas">
             <a class="btn btn--primary" href="https://play.dinkdeck.net/register">Get started free</a>
             <a class="btn btn--ghost" href="#demo">See the live board</a>
           </div>
           <ul class="checks">
+            <li class="check--free"><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Free to use</li>
             <li><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>No install to try it</li>
             <li><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Desktop &amp; mobile</li>
             <li><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>No account to watch a board</li>
@@ -537,6 +541,37 @@
       </div>
     </section>
 
+
+    <section class="tut-showcase wrap" id="tutorial">
+      <div class="tut-showcase__copy">
+        <p class="eyebrow">Watch it first</p>
+        <h2>See a whole night, in fifty seconds.</h2>
+        <p>
+          Signing up, finding open play, starting a club and posting a session — the real
+          app, recorded in one take. Three more clips carry it through running the night
+          from the desk and reading the recap the morning after.
+        </p>
+        <div class="hero-ctas">
+          <a class="btn btn--primary" href="tutorial.html">Read the full tutorial</a>
+          <a class="btn btn--ghost" href="https://play.dinkdeck.net/register">Create your account</a>
+        </div>
+        <ul class="tut-facts">
+          <li><b>4</b><span>chapters</span></li>
+          <li><b>49</b><span>steps</span></li>
+          <li><b>4</b><span>recordings</span></li>
+        </ul>
+      </div>
+      <figure class="tut-clip tut-clip--phone">
+        <video
+          controls
+          playsinline
+          preload="none"
+          poster="guide/01-sign-in.webp"
+          src="guide/1-getting-started.webm"
+        ></video>
+      </figure>
+    </section>
+
     <section class="faq-section wrap" id="faq">
       <div class="faq-layout">
         <div class="faq-intro">
@@ -628,11 +663,9 @@
               <span class="faq-item__glyph" data-faq-glyph>+</span>
             </button>
             <div class="faq-item__a" data-faq-a hidden>
-              Free to play and free to host while in beta — everything is
-              open. When beta ends there will be two plans, Player and Host,
-              at prices still to be announced, with extra free months on top —
-              and nobody is charged without being asked first. Court fees a
-              club tracks move through GCash or cash in hand, never through
+              Free — everything is open, for players and for clubs alike. Nobody is ever charged without
+              being asked first. What you pay for a session is the club's
+              own fee — it moves through GCash or cash in hand, never through
               the app.
             </div>
           </div>
@@ -678,7 +711,7 @@
     <section class="wrap">
       <div class="final-cta">
         <h2>Ready to run open play the fair way?</h2>
-        <p>Free while in beta. Set up tonight's session in about two minutes.</p>
+        <p>Free. Set up tonight's session in about two minutes.</p>
         <div class="hero-ctas">
           <a class="btn btn--primary" href="https://play.dinkdeck.net/register">Get started free</a>
           <a class="btn btn--ghost" href="https://play.dinkdeck.net/signin">Sign in</a>
@@ -710,6 +743,7 @@
         </span>
       </a>
       <div class="footer-links">
+        <a href="tutorial.html">Tutorial</a>
         <a href="#contact">Contact</a>
         <a href="https://play.dinkdeck.net/signin">Sign in</a>
         <a href="https://play.dinkdeck.net/register">Get started</a>

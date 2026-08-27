@@ -277,6 +277,13 @@ button {
   color: var(--muted-foreground);
 }
 
+/* What it costs is the first question anybody has, so the one check that
+   answers it is not the same weight as "desktop & mobile". */
+.checks li.check--free {
+  color: var(--lime-ink);
+  font-weight: 700;
+}
+
 .checks svg {
   flex-shrink: 0;
   color: var(--lime-ink);
