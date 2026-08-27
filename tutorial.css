@@ -84,6 +84,39 @@
   color: var(--foreground);
 }
 
+/* A track opening. Loud, because it is the one place the reader has to
+   notice they have crossed from one audience to the other. */
+
+.tut-trackhead {
+  margin-top: clamp(56px, 8vw, 92px);
+  padding-top: clamp(28px, 4vw, 44px);
+  border-top: 2px solid var(--lime-ink);
+  max-width: 60ch;
+}
+
+.tut-trackhead__label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(24px, 4vw, 34px);
+  letter-spacing: -0.02em;
+  color: var(--lime-ink);
+  margin: 0;
+}
+
+.tut-trackhead__blurb {
+  margin: 10px 0 0;
+  color: var(--muted-foreground);
+  line-height: 1.62;
+}
+
+.tut-nav__track {
+  font-family: var(--font-display);
+  color: var(--lime-ink) !important;
+  text-transform: uppercase;
+  font-size: 11px !important;
+  letter-spacing: 0.14em;
+}
+
 /* ---------- the read ---------- */
 
 .tut-body {
